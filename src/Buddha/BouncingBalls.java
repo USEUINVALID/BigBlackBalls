@@ -104,10 +104,12 @@ public class BouncingBalls extends JPanel {
         private void move() {
             if (x + xSpeed < 0 || x + xSpeed > container.getWidth() - size) {
                 xSpeed = -xSpeed;
+                playPivoSound();
             }
 
             if (y + ySpeed < 0 || y + ySpeed > container.getHeight() - size) {
                 ySpeed = -ySpeed;
+                playPivoSound();
             }
 
             x += xSpeed;
